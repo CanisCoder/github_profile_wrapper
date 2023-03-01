@@ -1,5 +1,5 @@
 body{
-  
+  box-sizing: border-box;
   background-color: rgb(152, 213, 213);
 }
 .main{
@@ -11,6 +11,8 @@ body{
 #userName{
   color: rgb(1, 14, 7);
   font-size: large;
+  width: 16%;
+  text-align: center;
 }
 input {
   width: 10%;
@@ -24,37 +26,32 @@ input {
 }
 #btn1 button{
   align-items: center;
-  width: 10%;
   padding: 12px 20px;
   margin: 8px 0;
   border-radius: 25px;
-  background-color: #7f80b4;
   background-position: left top;
   background-repeat: repeat;
-  padding: 10px;
- 
 }
 
-
-#showDetails{
-  color: rgb(0, 8, 8);
-}
 
 .card{
   width: 30%;
   bottom: 90px;
-  
-  
-
+  margin: 2rem;
+  margin-top: 8rem;
+  border: 5px solid rgba(0,0,0,.125) !important;
+  height: 460px;
 }.card-img img{
   margin-bottom: 50px;
-  width: 50%;
-  height: 50%;
+  width: 200px;
+  height: 200px;
   bottom: 160px;
   right: 30px;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
+  margin-top: 3rem;
+  margin-left: 3rem;
 }
 .card-body{
   bottom: 180px;
@@ -65,9 +62,11 @@ input {
 .card-title{
   position: relative;
   font-weight: bold;
-  margin-left: 10px;
+  margin-left: 36px;
   bottom: 10px;
   font-size: large;
+  width: 100%;
+  font-size: 35px;
 }
 li{
   float: left;
@@ -116,12 +115,10 @@ p{
   transition: .5sp;
   
 }
-li{
+/* li{
   display: block;
     width: 180px;
     height: 50px;
     margin-bottom: 100px;
-    align-items: center;
-  
-  
-}
+    align-items: center; 
+} */
