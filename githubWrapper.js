@@ -8,7 +8,6 @@ async function showRepoInfo(userName) {
   const res = await fetch(`https://api.github.com/users/${userName}/repos`);
 
   const projects = await res.json();
-  console.log(projects);
   for (let i = 0; i < projects.length; i++) {
     reposInfoDiv.innerHTML += `
         <div id="reposInfo">
@@ -49,6 +48,7 @@ showDetailsButton.addEventListener("click", async () => {
   showRepoInfo(userName);
 });
 function showProfile(data) {
+  let un = data?.login;
   profileInfoDiv.innerHTML = `<div id="profileInfo">
         <div class="card">
         <div class="card-img">
@@ -65,21 +65,20 @@ function showProfile(data) {
                 <button type="button" class="btn btn-light">${data.following} Following</button> 
                    <br>
                    <br>
-              <button type="button" class="btn btn-primary" onClick=${openProfile(data.html_url)}>Do Checkout Profile</button>
-
-
+              <button type="button" class="btn btn-primary" id="checkoutProfile" onClick=openProfile("${un}")> Do Checkout Profile</button>
               </p>
           </div>
         </div>
       </div>
      <h1> Repositories </h1>
      <hr class="dotted">
-      
-
     </div>`;
 
 }
 
-function openProfile(url) {
+
+
+function openProfile(un) {
+  let url = `https://github.com/${un}`;
   window.open(url, "_blank");
 }
